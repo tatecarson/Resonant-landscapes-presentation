@@ -1,0 +1,134 @@
+{
+  "nodes": [
+    {
+      "id": "41f824929a04838c",
+      "type": "group",
+      "isStartNode": true,
+      "x": 260,
+      "y": 600,
+      "width": 1200,
+      "height": 675,
+      "label": "Introduction"
+    },
+    {
+      "id": "014abd4a2893239e",
+      "type": "group",
+      "x": -360,
+      "y": 1440,
+      "width": 1200,
+      "height": 675,
+      "label": "Recording"
+    },
+    {
+      "id": "5dd210221d973325",
+      "type": "group",
+      "x": 1080,
+      "y": 1440,
+      "width": 1200,
+      "height": 675,
+      "label": "Developement"
+    },
+    {
+      "id": "152cff44aeb8a714",
+      "type": "group",
+      "x": 260,
+      "y": -160,
+      "width": 1200,
+      "height": 675,
+      "label": "Composition"
+    },
+    {
+      "id": "506d3f52cbc84da5",
+      "type": "link",
+      "url": "https://uploads.knightlab.com/storymapjs/f75056c4573a08981bd5202561883b25/resonant-landscapes/index.html",
+      "x": -360,
+      "y": 1480,
+      "width": 1200,
+      "height": 635
+    },
+    {
+      "id": "b0405f786c96b8e7",
+      "type": "text",
+      "text": "# Resonant Landscapes",
+      "x": 700,
+      "y": 680,
+      "width": 346,
+      "height": 50
+    },
+    {
+      "id": "c26dd345f23e352e",
+      "type": "file",
+      "file": "Introduction.md",
+      "x": 400,
+      "y": 780,
+      "width": 400,
+      "height": 400
+    },
+    {
+      "id": "c6c353010db5c431",
+      "type": "file",
+      "file": "Picture/Palisades-1.jpeg",
+      "isSticker": true,
+      "x": 860,
+      "y": 780,
+      "width": 533,
+      "height": 400
+    },
+    {
+      "id": "71d37e77f1a994c7",
+      "type": "text",
+      "text": "# Test 3\n",
+      "x": 1430,
+      "y": 1654,
+      "width": 260,
+      "height": 60
+    }
+  ],
+  "edges": [
+    {
+      "id": "c54986e79a169bc1",
+      "fromNode": "41f824929a04838c",
+      "fromSide": "bottom",
+      "toNode": "014abd4a2893239e",
+      "toSide": "top",
+      "label": "2"
+    },
+    {
+      "id": "2ddf32fb8cb59dcf",
+      "fromNode": "41f824929a04838c",
+      "fromSide": "bottom",
+      "toNode": "5dd210221d973325",
+      "toSide": "top",
+      "label": "3"
+    },
+    {
+      "id": "a10cf1fac412d4c8",
+      "fromNode": "014abd4a2893239e",
+      "fromSide": "top",
+      "toNode": "41f824929a04838c",
+      "toSide": "left"
+    },
+    {
+      "id": "bbc6d8b31991d953",
+      "fromNode": "5dd210221d973325",
+      "fromSide": "top",
+      "toNode": "41f824929a04838c",
+      "toSide": "right"
+    },
+    {
+      "id": "815aba27ee8a9d89",
+      "fromNode": "41f824929a04838c",
+      "fromSide": "top",
+      "toNode": "152cff44aeb8a714",
+      "toSide": "bottom",
+      "label": "4"
+    },
+    {
+      "id": "80587e0c518cee8b",
+      "fromNode": "152cff44aeb8a714",
+      "fromSide": "left",
+      "toNode": "41f824929a04838c",
+      "toSide": "left"
+    }
+  ]
+}
