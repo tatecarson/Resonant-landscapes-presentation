@@ -38,6 +38,16 @@
       "label": "Composition"
     },
     {
+      "id": "c6c353010db5c431",
+      "type": "file",
+      "file": "Picture/Palisades-1.jpeg",
+      "isSticker": true,
+      "x": 860,
+      "y": 780,
+      "width": 533,
+      "height": 400
+    },
+    {
       "id": "506d3f52cbc84da5",
       "type": "link",
       "url": "https://uploads.knightlab.com/storymapjs/f75056c4573a08981bd5202561883b25/resonant-landscapes/index.html",
@@ -62,17 +72,8 @@
       "x": 400,
       "y": 780,
       "width": 400,
-      "height": 400
-    },
-    {
-      "id": "c6c353010db5c431",
-      "type": "file",
-      "file": "Picture/Palisades-1.jpeg",
-      "isSticker": true,
-      "x": 860,
-      "y": 780,
-      "width": 533,
-      "height": 400
+      "height": 400,
+      "color": "6"
     },
     {
       "id": "71d37e77f1a994c7",
