@@ -1,6 +1,26 @@
 {
   "nodes": [
     {
+      "id": "73ac7ba0e756db47",
+      "type": "group",
+      "x": 1560,
+      "y": 1580,
+      "width": 1480,
+      "height": 1215,
+      "color": "6",
+      "label": "User Interaction "
+    },
+    {
+      "id": "5dd210221d973325",
+      "type": "group",
+      "x": 1560,
+      "y": 600,
+      "width": 1480,
+      "height": 900,
+      "color": "2",
+      "label": "App Services Overview"
+    },
+    {
       "id": "41f824929a04838c",
       "type": "group",
       "isStartNode": true,
@@ -8,34 +28,46 @@
       "y": 600,
       "width": 1200,
       "height": 675,
+      "color": "4",
       "label": "Introduction"
     },
     {
       "id": "014abd4a2893239e",
       "type": "group",
-      "x": -360,
-      "y": 1440,
+      "x": 260,
+      "y": 2120,
       "width": 1200,
       "height": 675,
+      "color": "1",
       "label": "Recording"
     },
     {
-      "id": "5dd210221d973325",
-      "type": "group",
-      "x": 1080,
-      "y": 1440,
-      "width": 1200,
-      "height": 675,
-      "label": "Developement"
-    },
-    {
-      "id": "152cff44aeb8a714",
+      "id": "228f7baf25ac7553",
       "type": "group",
       "x": 260,
-      "y": -160,
+      "y": 1360,
       "width": 1200,
       "height": 675,
-      "label": "Composition"
+      "color": "6",
+      "label": "Recording Process"
+    },
+    {
+      "id": "8a10ec3d3b2e8ed1",
+      "x": 3120,
+      "y": 600,
+      "width": 1200,
+      "height": 675,
+      "type": "group",
+      "label": "App UI"
+    },
+    {
+      "id": "10d3f8c70ddbee6f",
+      "x": 3120,
+      "y": 1580,
+      "width": 1200,
+      "height": 675,
+      "type": "group",
+      "label": "Conclusion"
     },
     {
       "id": "c6c353010db5c431",
@@ -48,88 +80,138 @@
       "height": 400
     },
     {
-      "id": "506d3f52cbc84da5",
+      "id": "14afe8a5d5e36750",
+      "type": "text",
+      "text": "- Immersive ambisonics field recordings of 13 South Dakota State Parks \n- **Used for**\n\t- Interactive smartphone-based sound art exhibit\n\t- Immersive soundscape compositions\n- **Goal:** By studying a park's soundscape through immersive recording, we can gain a deeper understanding and appreciation for its unique sonic characteristics. ",
+      "x": 298,
+      "y": 786,
+      "width": 542,
+      "height": 254
+    },
+    {
+      "id": "b58ab484318a334f",
       "type": "link",
       "url": "https://uploads.knightlab.com/storymapjs/f75056c4573a08981bd5202561883b25/resonant-landscapes/index.html",
-      "x": -360,
-      "y": 1480,
+      "x": 260,
+      "y": 2140,
       "width": 1200,
-      "height": 635
+      "height": 655
+    },
+    {
+      "id": "b79a78dcd5c18776",
+      "type": "file",
+      "file": "Pasted image 20240317135957.png",
+      "x": 980,
+      "y": 0,
+      "width": 2620,
+      "height": 446
     },
     {
       "id": "b0405f786c96b8e7",
       "type": "text",
-      "text": "# Resonant Landscapes",
-      "x": 700,
-      "y": 680,
-      "width": 346,
-      "height": 50
+      "text": "# Introduction",
+      "shape": "oval",
+      "x": 680,
+      "y": 640,
+      "width": 360,
+      "height": 100
     },
     {
-      "id": "c26dd345f23e352e",
-      "type": "file",
-      "file": "Introduction.md",
-      "x": 400,
-      "y": 780,
-      "width": 400,
-      "height": 400,
-      "color": "6"
-    },
-    {
-      "id": "71d37e77f1a994c7",
+      "id": "184e1e5c8dcc94ca",
       "type": "text",
-      "text": "# Test 3\n",
-      "x": 1430,
-      "y": 1654,
+      "text": "# Core Sound Octomic \n\n- 2nd-order ambisonics microphone \n- The microphone records in \"3 dimensions\" with multiple polar patterns simultaneously. It uses 8 channels to encode A-format ambisonics, that can be decoded in the processing stage. \n- The goal is to provide an ecologically valid reproduction of the perceptual dimensions of a soundscape. \n- It also allows for head-tracking, or the ability for a user to reorient their listening position in the soundscape.\n\n\n\n",
+      "x": 340,
+      "y": 1565,
+      "width": 500,
+      "height": 375
+    },
+    {
+      "id": "9294b4d482ee0691",
+      "type": "text",
+      "text": "# Recording Process",
+      "shape": "oval",
+      "x": 710,
+      "y": 1420,
+      "width": 300,
+      "height": 100
+    },
+    {
+      "id": "d15b06672c9fd330",
+      "type": "file",
+      "file": "20180318_114453_001.jpg",
+      "isSticker": true,
+      "x": 971,
+      "y": 1565,
+      "width": 312,
+      "height": 416
+    },
+    {
+      "id": "15c8689128772500",
+      "type": "text",
+      "text": "```mermaid\ngraph TB;\n\nA[App Core] -->|Displays map & integrates GPS| B[rlayers]\n\nB -->|User location tracking| C[User Location]\n\nA -->|Calculates distances| D[Turf.js]\n\nC -.->|Determines proximity| D\n\nA -->|Loads ambisonic buffers| E[Omnitone]\n\nE -->|Feeds buffers into| F[Resonance Audio]\n\nD -.->|Informs| F\n\nF -->|Handles panning & distance| G[Spatial Audio Experience]\n\n  \n\nB -->|Comprehensive map functionality| H[DSU Map Display & User Tracking]\n\nD -->|Proximity calculations| I[User to Sound Locations]\n\nG -->|Dynamic audio control based on user movement| J[Volume & Orientation Adjustment]\n```",
+      "x": 1860,
+      "y": 705,
+      "width": 900,
+      "height": 765
+    },
+    {
+      "id": "a4dd0bf74a4d43ad",
+      "type": "text",
+      "text": "# Services",
+      "shape": "oval",
+      "x": 2180,
+      "y": 630,
       "width": 260,
       "height": 60
+    },
+    {
+      "id": "1a47f86f60c37f46",
+      "x": 1760,
+      "y": 1660,
+      "width": 1080,
+      "height": 1115,
+      "type": "text",
+      "text": "```mermaid\nsequenceDiagram\n\nparticipant User\n\nparticipant App\n\nparticipant AudioSystem\n\n  \n\nUser->>+App: Opens App\n\nApp->>+App: Displays Map with Listening Spots\n\nloop User Navigates Map\n\nUser->>+App: Moves Closer to Listening Spot\n\nalt Within 15 meters\n\nApp->>+AudioSystem: Starts Playback at Lower Volume\n\nalt Within 2 meters\n\nAudioSystem->>+AudioSystem: Increases Volume Gradually\n\nalt At Center\n\nAudioSystem->>+AudioSystem: Max Volume & Orientation Change Enabled\n\nUser->>+AudioSystem: Rotates Phone\n\nAudioSystem-->>-User: Adjusts Audio Based on Orientation\n\nend\n\nend\n\nelse Farther than 15 meters\n\nAudioSystem->>AudioSystem: Stops Playback\n\nend\n\nend\n\nApp-->>-User: Updates Display Based on User Location\n```"
+    },
+    {
+      "id": "a76932be2a362e1f",
+      "type": "text",
+      "text": "# User Interaction",
+      "shape": "oval",
+      "x": 2170,
+      "y": 1600,
+      "width": 260,
+      "height": 50
     }
   ],
   "edges": [
     {
-      "id": "c54986e79a169bc1",
+      "id": "29b5de509df5b924",
       "fromNode": "41f824929a04838c",
       "fromSide": "bottom",
-      "toNode": "014abd4a2893239e",
-      "toSide": "top",
-      "label": "2"
+      "toNode": "228f7baf25ac7553",
+      "toSide": "top"
     },
     {
-      "id": "2ddf32fb8cb59dcf",
-      "fromNode": "41f824929a04838c",
+      "id": "cebba0103ea78b82",
+      "fromNode": "228f7baf25ac7553",
       "fromSide": "bottom",
+      "toNode": "b58ab484318a334f",
+      "toSide": "top"
+    },
+    {
+      "id": "dc24b2b8fec10e24",
+      "fromNode": "b58ab484318a334f",
+      "fromSide": "right",
       "toNode": "5dd210221d973325",
-      "toSide": "top",
-      "label": "3"
-    },
-    {
-      "id": "a10cf1fac412d4c8",
-      "fromNode": "014abd4a2893239e",
-      "fromSide": "top",
-      "toNode": "41f824929a04838c",
       "toSide": "left"
     },
     {
-      "id": "bbc6d8b31991d953",
+      "id": "4759bf4abaabe8e5",
       "fromNode": "5dd210221d973325",
-      "fromSide": "top",
-      "toNode": "41f824929a04838c",
-      "toSide": "right"
-    },
-    {
-      "id": "815aba27ee8a9d89",
-      "fromNode": "41f824929a04838c",
-      "fromSide": "top",
-      "toNode": "152cff44aeb8a714",
-      "toSide": "bottom",
-      "label": "4"
-    },
-    {
-      "id": "80587e0c518cee8b",
-      "fromNode": "152cff44aeb8a714",
-      "fromSide": "left",
-      "toNode": "41f824929a04838c",
-      "toSide": "left"
+      "fromSide": "bottom",
+      "toNode": "73ac7ba0e756db47",
+      "toSide": "top"
     }
   ]
 }
