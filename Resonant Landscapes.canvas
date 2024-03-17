@@ -53,21 +53,30 @@
     },
     {
       "id": "8a10ec3d3b2e8ed1",
+      "type": "group",
       "x": 3120,
       "y": 600,
       "width": 1200,
       "height": 675,
-      "type": "group",
       "label": "App UI"
     },
     {
       "id": "10d3f8c70ddbee6f",
+      "type": "group",
       "x": 3120,
       "y": 1580,
       "width": 1200,
       "height": 675,
-      "type": "group",
       "label": "Conclusion"
+    },
+    {
+      "id": "1a47f86f60c37f46",
+      "type": "text",
+      "text": "```mermaid\nsequenceDiagram\n\nparticipant User\n\nparticipant App\n\nparticipant AudioSystem\n\n  \n\nUser->>+App: Opens App\n\nApp->>+App: Displays Map with Listening Spots\n\nloop User Navigates Map\n\nUser->>+App: Moves Closer to Listening Spot\n\nalt Within 15 meters\n\nApp->>+AudioSystem: Starts Playback at Lower Volume\n\nalt Within 2 meters\n\nAudioSystem->>+AudioSystem: Increases Volume Gradually\n\nalt At Center\n\nAudioSystem->>+AudioSystem: Max Volume & Orientation Change Enabled\n\nUser->>+AudioSystem: Rotates Phone\n\nAudioSystem-->>-User: Adjusts Audio Based on Orientation\n\nend\n\nend\n\nelse Farther than 15 meters\n\nAudioSystem->>AudioSystem: Stops Playback\n\nend\n\nend\n\nApp-->>-User: Updates Display Based on User Location\n```",
+      "x": 1760,
+      "y": 1660,
+      "width": 1080,
+      "height": 1115
     },
     {
       "id": "c6c353010db5c431",
@@ -96,15 +105,6 @@
       "y": 2140,
       "width": 1200,
       "height": 655
-    },
-    {
-      "id": "b79a78dcd5c18776",
-      "type": "file",
-      "file": "Pasted image 20240317135957.png",
-      "x": 980,
-      "y": 0,
-      "width": 2620,
-      "height": 446
     },
     {
       "id": "b0405f786c96b8e7",
@@ -146,6 +146,16 @@
       "height": 416
     },
     {
+      "id": "b79a78dcd5c18776",
+      "type": "file",
+      "file": "Pasted image 20240317135957.png",
+      "isSticker": true,
+      "x": 980,
+      "y": 0,
+      "width": 2620,
+      "height": 446
+    },
+    {
       "id": "15c8689128772500",
       "type": "text",
       "text": "```mermaid\ngraph TB;\n\nA[App Core] -->|Displays map & integrates GPS| B[rlayers]\n\nB -->|User location tracking| C[User Location]\n\nA -->|Calculates distances| D[Turf.js]\n\nC -.->|Determines proximity| D\n\nA -->|Loads ambisonic buffers| E[Omnitone]\n\nE -->|Feeds buffers into| F[Resonance Audio]\n\nD -.->|Informs| F\n\nF -->|Handles panning & distance| G[Spatial Audio Experience]\n\n  \n\nB -->|Comprehensive map functionality| H[DSU Map Display & User Tracking]\n\nD -->|Proximity calculations| I[User to Sound Locations]\n\nG -->|Dynamic audio control based on user movement| J[Volume & Orientation Adjustment]\n```",
@@ -163,15 +173,6 @@
       "y": 630,
       "width": 260,
       "height": 60
-    },
-    {
-      "id": "1a47f86f60c37f46",
-      "x": 1760,
-      "y": 1660,
-      "width": 1080,
-      "height": 1115,
-      "type": "text",
-      "text": "```mermaid\nsequenceDiagram\n\nparticipant User\n\nparticipant App\n\nparticipant AudioSystem\n\n  \n\nUser->>+App: Opens App\n\nApp->>+App: Displays Map with Listening Spots\n\nloop User Navigates Map\n\nUser->>+App: Moves Closer to Listening Spot\n\nalt Within 15 meters\n\nApp->>+AudioSystem: Starts Playback at Lower Volume\n\nalt Within 2 meters\n\nAudioSystem->>+AudioSystem: Increases Volume Gradually\n\nalt At Center\n\nAudioSystem->>+AudioSystem: Max Volume & Orientation Change Enabled\n\nUser->>+AudioSystem: Rotates Phone\n\nAudioSystem-->>-User: Adjusts Audio Based on Orientation\n\nend\n\nend\n\nelse Farther than 15 meters\n\nAudioSystem->>AudioSystem: Stops Playback\n\nend\n\nend\n\nApp-->>-User: Updates Display Based on User Location\n```"
     },
     {
       "id": "a76932be2a362e1f",
