@@ -2,12 +2,12 @@
   "nodes": [
     {
       "id": "ec539caae9f65afd",
+      "type": "group",
       "x": 240,
       "y": -20,
-      "width": 4100,
-      "height": 2835,
+      "width": 4160,
+      "height": 3220,
       "color": "#af6e6e",
-      "type": "group",
       "label": "Presentation",
       "background": "angryimg(1).png"
     },
@@ -17,7 +17,7 @@
       "x": 1560,
       "y": 1580,
       "width": 1480,
-      "height": 1215,
+      "height": 1600,
       "color": "6",
       "label": "User Interaction "
     },
@@ -83,21 +83,11 @@
     {
       "id": "1a47f86f60c37f46",
       "type": "text",
-      "text": "```mermaid\nsequenceDiagram\n\nparticipant User\n\nparticipant App\n\nparticipant AudioSystem\n\n  \n\nUser->>+App: Opens App\n\nApp->>+App: Displays Map with Listening Spots\n\nloop User Navigates Map\n\nUser->>+App: Moves Closer to Listening Spot\n\nalt Within 15 meters\n\nApp->>+AudioSystem: Starts Playback at Lower Volume\n\nalt Within 2 meters\n\nAudioSystem->>+AudioSystem: Increases Volume Gradually\n\nalt At Center\n\nAudioSystem->>+AudioSystem: Max Volume & Orientation Change Enabled\n\nUser->>+AudioSystem: Rotates Phone\n\nAudioSystem-->>-User: Adjusts Audio Based on Orientation\n\nend\n\nend\n\nelse Farther than 15 meters\n\nAudioSystem->>AudioSystem: Stops Playback\n\nend\n\nend\n\nApp-->>-User: Updates Display Based on User Location\n```",
-      "x": 1760,
+      "text": "```mermaid\nflowchart TD\n\n  \n\nB(App Displays Map with Listening Spots)\n\nB --> D{User Within 15 meters?}\n\nD -->|Yes| E(App Starts Playback at Lower Volume)\n\nD -->|No| I[AudioSystem Stops Playback]\n\n  \n\nE --> F{User Within 2 meters?}\n\nF -->|Yes| G(Audio System Increases Volume Gradually)\n\nF -->|No| I\n\n  \n\nG --> H{User At Center?}\n\nH -->|Yes| J(Audio System: Max Volume & Orientation Change Enabled)\n\nH -->|No| I\n\n  \n\nJ --> K(User Rotates Phone)\n\nK --> L(Audio Adjusts Based on Orientation)\n\nL --> M(App Updates Display Based on User Location)\n\nI --> M\n```",
+      "x": 1720,
       "y": 1660,
       "width": 1080,
-      "height": 1115
-    },
-    {
-      "id": "c6c353010db5c431",
-      "type": "file",
-      "file": "Picture/Palisades-1.jpeg",
-      "isSticker": true,
-      "x": 860,
-      "y": 780,
-      "width": 533,
-      "height": 400
+      "height": 1460
     },
     {
       "id": "14afe8a5d5e36750",
@@ -118,6 +108,26 @@
       "height": 655
     },
     {
+      "id": "b79a78dcd5c18776",
+      "type": "file",
+      "file": "Pasted image 20240317135957.png",
+      "isSticker": true,
+      "x": 980,
+      "y": 0,
+      "width": 2620,
+      "height": 446
+    },
+    {
+      "id": "c6c353010db5c431",
+      "type": "file",
+      "file": "Picture/Palisades-1.jpeg",
+      "isSticker": true,
+      "x": 860,
+      "y": 780,
+      "width": 533,
+      "height": 400
+    },
+    {
       "id": "b0405f786c96b8e7",
       "type": "text",
       "text": "# Introduction",
@@ -126,6 +136,45 @@
       "y": 640,
       "width": 360,
       "height": 100
+    },
+    {
+      "id": "15c8689128772500",
+      "type": "text",
+      "text": "```mermaid\ngraph TB;\n\nA[App] -->|Displays map & integrates GPS| B[rlayers]\n\nB -->|User location tracking| C[User Location]\n\nA -->|Calculates distances| D[Turf.js]\n\nC -.->|Determines proximity| D\n\nA -->|Loads 9-channel ambisonic buffers| E[Omnitone]\n\nE -->|Feeds buffers into| F[Resonance Audio]\n\nF -->|Decodes Ambisonics to| G[Binaural Audio for headphones]\n\nD -.->|Informs| F\n\nB -->|Comprehensive map functionality| H[DSU Map Display & User Tracking]\n\n```",
+      "x": 1860,
+      "y": 705,
+      "width": 1000,
+      "height": 655
+    },
+    {
+      "id": "a76932be2a362e1f",
+      "type": "text",
+      "text": "# User Interaction",
+      "shape": "oval",
+      "x": 2170,
+      "y": 1600,
+      "width": 260,
+      "height": 50
+    },
+    {
+      "id": "d15b06672c9fd330",
+      "type": "file",
+      "file": "20180318_114453_001.jpg",
+      "isSticker": true,
+      "x": 971,
+      "y": 1565,
+      "width": 312,
+      "height": 416
+    },
+    {
+      "id": "fec9780a93a838bf",
+      "type": "file",
+      "file": "Pasted image 20240318113541.png",
+      "isSticker": true,
+      "x": 3900,
+      "y": 288,
+      "width": 399,
+      "height": 158
     },
     {
       "id": "184e1e5c8dcc94ca",
@@ -147,63 +196,24 @@
       "height": 100
     },
     {
-      "id": "d15b06672c9fd330",
-      "type": "file",
-      "file": "20180318_114453_001.jpg",
-      "isSticker": true,
-      "x": 971,
-      "y": 1565,
-      "width": 312,
-      "height": 416
-    },
-    {
-      "id": "b79a78dcd5c18776",
-      "type": "file",
-      "file": "Pasted image 20240317135957.png",
-      "isSticker": true,
-      "x": 980,
-      "y": 0,
-      "width": 2620,
-      "height": 446
-    },
-    {
-      "id": "15c8689128772500",
+      "id": "e5d64b0ba774034e",
       "type": "text",
-      "text": "```mermaid\ngraph TB;\n\nA[App Core] -->|Displays map & integrates GPS| B[rlayers]\n\nB -->|User location tracking| C[User Location]\n\nA -->|Calculates distances| D[Turf.js]\n\nC -.->|Determines proximity| D\n\nA -->|Loads ambisonic buffers| E[Omnitone]\n\nE -->|Feeds buffers into| F[Resonance Audio]\n\nD -.->|Informs| F\n\nF -->|Handles panning & distance| G[Spatial Audio Experience]\n\n  \n\nB -->|Comprehensive map functionality| H[DSU Map Display & User Tracking]\n\nD -->|Proximity calculations| I[User to Sound Locations]\n\nG -->|Dynamic audio control based on user movement| J[Volume & Orientation Adjustment]\n```",
-      "x": 1860,
-      "y": 705,
-      "width": 900,
-      "height": 765
+      "text": "# User Interface",
+      "shape": "oval",
+      "x": 3571,
+      "y": 620,
+      "width": 318,
+      "height": 70
     },
     {
       "id": "a4dd0bf74a4d43ad",
       "type": "text",
       "text": "# Services",
       "shape": "oval",
-      "x": 2180,
-      "y": 630,
+      "x": 2230,
+      "y": 620,
       "width": 260,
       "height": 60
-    },
-    {
-      "id": "a76932be2a362e1f",
-      "type": "text",
-      "text": "# User Interaction",
-      "shape": "oval",
-      "x": 2170,
-      "y": 1600,
-      "width": 260,
-      "height": 50
-    },
-    {
-      "id": "61170d604afd51b6",
-      "type": "file",
-      "file": "screenshot-rocks (1).svg",
-      "isSticker": true,
-      "x": 3197,
-      "y": 780,
-      "width": 225,
-      "height": 400
     },
     {
       "id": "24e2d68ad9bd7f3a",
@@ -216,16 +226,6 @@
       "height": 60
     },
     {
-      "id": "11747ef22477ca67",
-      "type": "file",
-      "file": "screenshot-rocks (2).svg",
-      "isSticker": true,
-      "x": 3765,
-      "y": 780,
-      "width": 225,
-      "height": 400
-    },
-    {
       "id": "32aa84ea555854ce",
       "type": "text",
       "text": "Playing a Recording > 2 meters",
@@ -234,6 +234,26 @@
       "y": 720,
       "width": 260,
       "height": 60
+    },
+    {
+      "id": "61170d604afd51b6",
+      "type": "file",
+      "file": "screenshot-rocks (1).svg",
+      "isSticker": true,
+      "x": 3197,
+      "y": 780,
+      "width": 225,
+      "height": 400
+    },
+    {
+      "id": "11747ef22477ca67",
+      "type": "file",
+      "file": "screenshot-rocks (2).svg",
+      "isSticker": true,
+      "x": 3765,
+      "y": 780,
+      "width": 225,
+      "height": 400
     },
     {
       "id": "90be1a08d9a8a80a",
@@ -276,14 +296,14 @@
       "height": 60
     },
     {
-      "id": "e5d64b0ba774034e",
+      "id": "ea64f0f9aae6bf2a",
       "type": "text",
-      "text": "# User Interface",
+      "text": "# Try the app",
       "shape": "oval",
-      "x": 3571,
-      "y": 620,
-      "width": 318,
-      "height": 70
+      "x": 3180,
+      "y": 1723,
+      "width": 339,
+      "height": 115
     },
     {
       "id": "8777814200ac5a6a",
@@ -296,26 +316,6 @@
       "height": 667
     },
     {
-      "id": "fd0fac87c4db51cc",
-      "type": "text",
-      "text": "# Soundscape Concert",
-      "shape": "oval",
-      "x": 3817,
-      "y": 1780,
-      "width": 347,
-      "height": 50
-    },
-    {
-      "id": "ea64f0f9aae6bf2a",
-      "type": "text",
-      "text": "# Try the app",
-      "shape": "oval",
-      "x": 3180,
-      "y": 1723,
-      "width": 339,
-      "height": 115
-    },
-    {
       "id": "d1a700b94503d39b",
       "type": "file",
       "file": "frame.png",
@@ -324,6 +324,16 @@
       "y": 1920,
       "width": 402,
       "height": 500
+    },
+    {
+      "id": "fd0fac87c4db51cc",
+      "type": "text",
+      "text": "# Soundscape Concert",
+      "shape": "oval",
+      "x": 3817,
+      "y": 1780,
+      "width": 347,
+      "height": 50
     }
   ],
   "edges": [
@@ -333,7 +343,7 @@
       "fromSide": "bottom",
       "toNode": "228f7baf25ac7553",
       "toSide": "top",
-      "color": "#fff5f5"
+      "color": "#ffffff"
     },
     {
       "id": "cebba0103ea78b82",
