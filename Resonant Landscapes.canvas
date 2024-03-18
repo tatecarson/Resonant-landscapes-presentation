@@ -1,6 +1,17 @@
 {
   "nodes": [
     {
+      "id": "ec539caae9f65afd",
+      "x": 240,
+      "y": -20,
+      "width": 4100,
+      "height": 2835,
+      "color": "#af6e6e",
+      "type": "group",
+      "label": "Presentation",
+      "background": "angryimg(1).png"
+    },
+    {
       "id": "73ac7ba0e756db47",
       "type": "group",
       "x": 1560,
@@ -11,6 +22,15 @@
       "label": "User Interaction "
     },
     {
+      "id": "10d3f8c70ddbee6f",
+      "type": "group",
+      "x": 3120,
+      "y": 1580,
+      "width": 1200,
+      "height": 1210,
+      "label": "Conclusion"
+    },
+    {
       "id": "5dd210221d973325",
       "type": "group",
       "x": 1560,
@@ -19,6 +39,15 @@
       "height": 900,
       "color": "2",
       "label": "App Services Overview"
+    },
+    {
+      "id": "8a10ec3d3b2e8ed1",
+      "type": "group",
+      "x": 3120,
+      "y": 600,
+      "width": 1200,
+      "height": 900,
+      "label": "App UI"
     },
     {
       "id": "41f824929a04838c",
@@ -50,24 +79,6 @@
       "height": 675,
       "color": "6",
       "label": "Recording Process"
-    },
-    {
-      "id": "8a10ec3d3b2e8ed1",
-      "type": "group",
-      "x": 3120,
-      "y": 600,
-      "width": 1200,
-      "height": 675,
-      "label": "App UI"
-    },
-    {
-      "id": "10d3f8c70ddbee6f",
-      "type": "group",
-      "x": 3120,
-      "y": 1580,
-      "width": 1200,
-      "height": 675,
-      "label": "Conclusion"
     },
     {
       "id": "1a47f86f60c37f46",
@@ -183,6 +194,136 @@
       "y": 1600,
       "width": 260,
       "height": 50
+    },
+    {
+      "id": "61170d604afd51b6",
+      "type": "file",
+      "file": "screenshot-rocks (1).svg",
+      "isSticker": true,
+      "x": 3197,
+      "y": 780,
+      "width": 225,
+      "height": 400
+    },
+    {
+      "id": "24e2d68ad9bd7f3a",
+      "type": "text",
+      "text": "Welcome Screen",
+      "shape": "oval",
+      "x": 3180,
+      "y": 720,
+      "width": 260,
+      "height": 60
+    },
+    {
+      "id": "11747ef22477ca67",
+      "type": "file",
+      "file": "screenshot-rocks (2).svg",
+      "isSticker": true,
+      "x": 3765,
+      "y": 780,
+      "width": 225,
+      "height": 400
+    },
+    {
+      "id": "32aa84ea555854ce",
+      "type": "text",
+      "text": "Playing a Recording > 2 meters",
+      "shape": "oval",
+      "x": 3748,
+      "y": 720,
+      "width": 260,
+      "height": 60
+    },
+    {
+      "id": "90be1a08d9a8a80a",
+      "type": "file",
+      "file": "screenshot-rocks(1).png",
+      "isSticker": true,
+      "x": 3505,
+      "y": 1040,
+      "width": 225,
+      "height": 400
+    },
+    {
+      "id": "daec2374adabba01",
+      "type": "text",
+      "text": "Listening Spot Overview",
+      "shape": "oval",
+      "x": 3488,
+      "y": 980,
+      "width": 260,
+      "height": 60
+    },
+    {
+      "id": "48a18768a00bbf92",
+      "type": "file",
+      "file": "screenshot-rocks (3).svg",
+      "isSticker": true,
+      "x": 4057,
+      "y": 1040,
+      "width": 225,
+      "height": 400
+    },
+    {
+      "id": "a2e1cf170768a587",
+      "type": "text",
+      "text": "Toggle Listener Orientation",
+      "shape": "oval",
+      "x": 4040,
+      "y": 980,
+      "width": 260,
+      "height": 60
+    },
+    {
+      "id": "e5d64b0ba774034e",
+      "type": "text",
+      "text": "# User Interface",
+      "shape": "oval",
+      "x": 3571,
+      "y": 620,
+      "width": 318,
+      "height": 70
+    },
+    {
+      "id": "8777814200ac5a6a",
+      "type": "file",
+      "file": "Landscape Poster.png",
+      "isSticker": true,
+      "x": 3740,
+      "y": 1860,
+      "width": 500,
+      "height": 667
+    },
+    {
+      "id": "fd0fac87c4db51cc",
+      "type": "text",
+      "text": "# Soundscape Concert",
+      "shape": "oval",
+      "x": 3817,
+      "y": 1780,
+      "width": 347,
+      "height": 50
+    },
+    {
+      "id": "ea64f0f9aae6bf2a",
+      "type": "text",
+      "text": "# Try the app",
+      "shape": "oval",
+      "x": 3180,
+      "y": 1723,
+      "width": 339,
+      "height": 115
+    },
+    {
+      "id": "d1a700b94503d39b",
+      "type": "file",
+      "file": "frame.png",
+      "isSticker": true,
+      "x": 3220,
+      "y": 1920,
+      "width": 402,
+      "height": 500
     }
   ],
   "edges": [
@@ -191,7 +332,8 @@
       "fromNode": "41f824929a04838c",
       "fromSide": "bottom",
       "toNode": "228f7baf25ac7553",
-      "toSide": "top"
+      "toSide": "top",
+      "color": "#fff5f5"
     },
     {
       "id": "cebba0103ea78b82",
@@ -213,6 +355,58 @@
       "fromSide": "bottom",
       "toNode": "73ac7ba0e756db47",
       "toSide": "top"
+    },
+    {
+      "id": "84f5194b639a8a8e",
+      "fromNode": "61170d604afd51b6",
+      "fromSide": "right",
+      "toNode": "90be1a08d9a8a80a",
+      "toSide": "left",
+      "color": "4"
+    },
+    {
+      "id": "30983a247fa11f91",
+      "fromNode": "90be1a08d9a8a80a",
+      "fromSide": "right",
+      "toNode": "11747ef22477ca67",
+      "toSide": "left",
+      "color": "4"
+    },
+    {
+      "id": "4093e220e849af15",
+      "fromNode": "11747ef22477ca67",
+      "fromSide": "right",
+      "toNode": "48a18768a00bbf92",
+      "toSide": "left",
+      "color": "4"
+    },
+    {
+      "id": "ede1d33d544d96b0",
+      "fromNode": "73ac7ba0e756db47",
+      "fromSide": "right",
+      "toNode": "8a10ec3d3b2e8ed1",
+      "toSide": "left"
+    },
+    {
+      "id": "7a862bf49ff00eff",
+      "fromNode": "ea64f0f9aae6bf2a",
+      "fromSide": "bottom",
+      "toNode": "d1a700b94503d39b",
+      "toSide": "top"
+    },
+    {
+      "id": "7e3ba1b0ffa4cd05",
+      "fromNode": "8a10ec3d3b2e8ed1",
+      "fromSide": "bottom",
+      "toNode": "10d3f8c70ddbee6f",
+      "toSide": "top"
+    },
+    {
+      "id": "31520b08d4965ca7",
+      "fromNode": "10d3f8c70ddbee6f",
+      "fromSide": "right",
+      "toNode": "41f824929a04838c",
+      "toSide": "right"
     }
   ]
 }
