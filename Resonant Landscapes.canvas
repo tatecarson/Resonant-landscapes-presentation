@@ -3,21 +3,21 @@
     {
       "id": "ec539caae9f65afd",
       "type": "group",
-      "x": 240,
+      "x": 200,
       "y": -20,
-      "width": 4160,
-      "height": 3220,
+      "width": 4220,
+      "height": 3540,
       "color": "#af6e6e",
       "label": "Presentation",
-      "background": "angryimg(1).png"
+      "background": "IMG_0303.jpeg"
     },
     {
       "id": "73ac7ba0e756db47",
       "type": "group",
       "x": 1560,
-      "y": 1580,
+      "y": 1630,
       "width": 1480,
-      "height": 1600,
+      "height": 1890,
       "color": "6",
       "label": "User Interaction "
     },
@@ -25,7 +25,7 @@
       "id": "10d3f8c70ddbee6f",
       "type": "group",
       "x": 3120,
-      "y": 1580,
+      "y": 2155,
       "width": 1200,
       "height": 1210,
       "label": "Conclusion"
@@ -64,7 +64,7 @@
       "id": "014abd4a2893239e",
       "type": "group",
       "x": 260,
-      "y": 2120,
+      "y": 2760,
       "width": 1200,
       "height": 675,
       "color": "1",
@@ -74,58 +74,20 @@
       "id": "228f7baf25ac7553",
       "type": "group",
       "x": 260,
-      "y": 1360,
+      "y": 1750,
       "width": 1200,
       "height": 675,
       "color": "6",
       "label": "Recording Process"
     },
     {
-      "id": "1a47f86f60c37f46",
+      "id": "15c8689128772500",
       "type": "text",
-      "text": "```mermaid\nflowchart TD\n\n  \n\nB(App Displays Map with Listening Spots)\n\nB --> D{User Within 15 meters?}\n\nD -->|Yes| E(App Starts Playback at Lower Volume)\n\nD -->|No| I[AudioSystem Stops Playback]\n\n  \n\nE --> F{User Within 2 meters?}\n\nF -->|Yes| G(Audio System Increases Volume Gradually)\n\nF -->|No| I\n\n  \n\nG --> H{User At Center?}\n\nH -->|Yes| J(Audio System: Max Volume & Orientation Change Enabled)\n\nH -->|No| I\n\n  \n\nJ --> K(User Rotates Phone)\n\nK --> L(Audio Adjusts Based on Orientation)\n\nL --> M(App Updates Display Based on User Location)\n\nI --> M\n```",
-      "x": 1720,
-      "y": 1660,
-      "width": 1080,
-      "height": 1460
-    },
-    {
-      "id": "14afe8a5d5e36750",
-      "type": "text",
-      "text": "- Immersive ambisonics field recordings of 13 South Dakota State Parks \n- **Used for**\n\t- Interactive smartphone-based sound art exhibit\n\t- Immersive soundscape compositions\n- **Goal:** By studying a park's soundscape through immersive recording, we can gain a deeper understanding and appreciation for its unique sonic characteristics. ",
-      "x": 298,
-      "y": 786,
-      "width": 542,
-      "height": 254
-    },
-    {
-      "id": "b58ab484318a334f",
-      "type": "link",
-      "url": "https://uploads.knightlab.com/storymapjs/f75056c4573a08981bd5202561883b25/resonant-landscapes/index.html",
-      "x": 260,
-      "y": 2140,
-      "width": 1200,
+      "text": "\n```mermaid\ngraph TB;\n\n  \n\nA[App] -->|Displays map| B[rlayers]\n\n  \n\nB -->|User location tracking| C[User Location]\n\n  \n\nA -->|Calculates distances| D[Turf.js]\n\n  \n\nC -.->|Feeds into| D\n\n  \n\nA -->|Loads 9-channel ambisonics buffers| E[Omnitone]\n\n  \n\nA --> |Gets phone orientation| H[Device Orientation Event]\n\n  \n\nH --> |Sets listener orientation| F\n\n  \n\nE -->|Feeds buffers into| F[Resonance Audio]\n\n  \n\nF -->|Decodes ambisonics to| G[Binaural Audio for headphones]\n\n  \n\nD -.->|Recording volume| F\n```",
+      "x": 1860,
+      "y": 705,
+      "width": 1000,
       "height": 655
-    },
-    {
-      "id": "b79a78dcd5c18776",
-      "type": "file",
-      "file": "Pasted image 20240317135957.png",
-      "isSticker": true,
-      "x": 980,
-      "y": 0,
-      "width": 2620,
-      "height": 446
-    },
-    {
-      "id": "c6c353010db5c431",
-      "type": "file",
-      "file": "Picture/Palisades-1.jpeg",
-      "isSticker": true,
-      "x": 860,
-      "y": 780,
-      "width": 533,
-      "height": 400
     },
     {
       "id": "b0405f786c96b8e7",
@@ -138,13 +100,24 @@
       "height": 100
     },
     {
-      "id": "15c8689128772500",
-      "type": "text",
-      "text": "```mermaid\ngraph TB;\n\nA[App] -->|Displays map & integrates GPS| B[rlayers]\n\nB -->|User location tracking| C[User Location]\n\nA -->|Calculates distances| D[Turf.js]\n\nC -.->|Determines proximity| D\n\nA -->|Loads 9-channel ambisonic buffers| E[Omnitone]\n\nE -->|Feeds buffers into| F[Resonance Audio]\n\nF -->|Decodes Ambisonics to| G[Binaural Audio for headphones]\n\nD -.->|Informs| F\n\nB -->|Comprehensive map functionality| H[DSU Map Display & User Tracking]\n\n```",
-      "x": 1860,
-      "y": 705,
-      "width": 1000,
-      "height": 655
+      "id": "14bc364f511d809e",
+      "type": "file",
+      "file": "Pasted image 20240318211746.png",
+      "isSticker": true,
+      "x": 3600,
+      "y": 131,
+      "width": 493,
+      "height": 185
+    },
+    {
+      "id": "40dc3c292726144b",
+      "type": "file",
+      "file": "Pasted image 20240318211550.png",
+      "isSticker": true,
+      "x": 454,
+      "y": 47,
+      "width": 2532,
+      "height": 353
     },
     {
       "id": "a76932be2a362e1f",
@@ -152,88 +125,9 @@
       "text": "# User Interaction",
       "shape": "oval",
       "x": 2170,
-      "y": 1600,
+      "y": 1650,
       "width": 260,
       "height": 50
-    },
-    {
-      "id": "d15b06672c9fd330",
-      "type": "file",
-      "file": "20180318_114453_001.jpg",
-      "isSticker": true,
-      "x": 971,
-      "y": 1565,
-      "width": 312,
-      "height": 416
-    },
-    {
-      "id": "fec9780a93a838bf",
-      "type": "file",
-      "file": "Pasted image 20240318113541.png",
-      "isSticker": true,
-      "x": 3900,
-      "y": 288,
-      "width": 399,
-      "height": 158
-    },
-    {
-      "id": "184e1e5c8dcc94ca",
-      "type": "text",
-      "text": "# Core Sound Octomic \n\n- 2nd-order ambisonics microphone \n- The microphone records in \"3 dimensions\" with multiple polar patterns simultaneously. It uses 8 channels to encode A-format ambisonics, that can be decoded in the processing stage. \n- The goal is to provide an ecologically valid reproduction of the perceptual dimensions of a soundscape. \n- It also allows for head-tracking, or the ability for a user to reorient their listening position in the soundscape.\n\n\n\n",
-      "x": 340,
-      "y": 1565,
-      "width": 500,
-      "height": 375
-    },
-    {
-      "id": "9294b4d482ee0691",
-      "type": "text",
-      "text": "# Recording Process",
-      "shape": "oval",
-      "x": 710,
-      "y": 1420,
-      "width": 300,
-      "height": 100
-    },
-    {
-      "id": "e5d64b0ba774034e",
-      "type": "text",
-      "text": "# User Interface",
-      "shape": "oval",
-      "x": 3571,
-      "y": 620,
-      "width": 318,
-      "height": 70
-    },
-    {
-      "id": "a4dd0bf74a4d43ad",
-      "type": "text",
-      "text": "# Services",
-      "shape": "oval",
-      "x": 2230,
-      "y": 620,
-      "width": 260,
-      "height": 60
-    },
-    {
-      "id": "24e2d68ad9bd7f3a",
-      "type": "text",
-      "text": "Welcome Screen",
-      "shape": "oval",
-      "x": 3180,
-      "y": 720,
-      "width": 260,
-      "height": 60
-    },
-    {
-      "id": "32aa84ea555854ce",
-      "type": "text",
-      "text": "Playing a Recording > 2 meters",
-      "shape": "oval",
-      "x": 3748,
-      "y": 720,
-      "width": 260,
-      "height": 60
     },
     {
       "id": "61170d604afd51b6",
@@ -246,14 +140,24 @@
       "height": 400
     },
     {
-      "id": "11747ef22477ca67",
-      "type": "file",
-      "file": "screenshot-rocks (2).svg",
-      "isSticker": true,
-      "x": 3765,
-      "y": 780,
-      "width": 225,
-      "height": 400
+      "id": "24e2d68ad9bd7f3a",
+      "type": "text",
+      "text": "Welcome Screen",
+      "shape": "oval",
+      "x": 3180,
+      "y": 720,
+      "width": 260,
+      "height": 60
+    },
+    {
+      "id": "a4dd0bf74a4d43ad",
+      "type": "text",
+      "text": "# Services",
+      "shape": "oval",
+      "x": 2230,
+      "y": 620,
+      "width": 260,
+      "height": 60
     },
     {
       "id": "90be1a08d9a8a80a",
@@ -276,16 +180,6 @@
       "height": 60
     },
     {
-      "id": "48a18768a00bbf92",
-      "type": "file",
-      "file": "screenshot-rocks (3).svg",
-      "isSticker": true,
-      "x": 4057,
-      "y": 1040,
-      "width": 225,
-      "height": 400
-    },
-    {
       "id": "a2e1cf170768a587",
       "type": "text",
       "text": "Toggle Listener Orientation",
@@ -296,34 +190,120 @@
       "height": 60
     },
     {
+      "id": "14afe8a5d5e36750",
+      "type": "text",
+      "text": "- Immersive ambisonics field recordings of 13 South Dakota State Parks \n- **Used for**\n\t- Interactive smartphone-based sound art exhibit\n\t- Immersive soundscape compositions\n- **Goal:** By studying a park's soundscape through immersive recording, we can gain a deeper understanding and appreciation for its unique sonic characteristics. ",
+      "x": 298,
+      "y": 786,
+      "width": 542,
+      "height": 254
+    },
+    {
+      "id": "c6c353010db5c431",
+      "type": "file",
+      "file": "Picture/Palisades-1.jpeg",
+      "isSticker": true,
+      "x": 860,
+      "y": 780,
+      "width": 533,
+      "height": 400
+    },
+    {
+      "id": "48a18768a00bbf92",
+      "type": "file",
+      "file": "screenshot-rocks (3).svg",
+      "isSticker": true,
+      "x": 4057,
+      "y": 1040,
+      "width": 225,
+      "height": 400
+    },
+    {
+      "id": "11747ef22477ca67",
+      "type": "file",
+      "file": "screenshot-rocks (2).svg",
+      "isSticker": true,
+      "x": 3765,
+      "y": 780,
+      "width": 225,
+      "height": 400
+    },
+    {
+      "id": "e5d64b0ba774034e",
+      "type": "text",
+      "text": "# User Interface",
+      "shape": "oval",
+      "x": 3571,
+      "y": 620,
+      "width": 318,
+      "height": 70
+    },
+    {
+      "id": "32aa84ea555854ce",
+      "type": "text",
+      "text": "Playing a Recording < 15 meters",
+      "shape": "oval",
+      "x": 3748,
+      "y": 720,
+      "width": 260,
+      "height": 60
+    },
+    {
+      "id": "1a47f86f60c37f46",
+      "type": "text",
+      "text": "```mermaid\n  \n\nflowchart TD\n\n  \n\n  \n\nB(App Displays Map with Listening Spots)\n\n  \n\nB --> D{User within 15 meters?}\n\n  \n\nD -->|Yes| E(User plays audio at lowest volume)\n\n  \n\nD -->|No| I[Audio System Stops Playback]\n\n  \n\n  \n\nE --> F{User < 15 && User > 2 \\n meters from center}\n\n  \n\nF -->|Yes| G(Audio System Increases Volume Gradually)\n\n  \n  \n  \n\n  \n\nG --> H{User < 2 meters from center}\n\n  \n\nH -->|Yes| J(Audio System: Max Volume & Orientation Change Enabled)\n\n  \n  \n  \n\n  \n\nJ --> K{User Rotates Phone}\n\n  \n\nK --> L(Listener orientation based on phone orientation)\n\n  \n\nL --> M(App Updates Display Based on User Location)\n\n  \n\nI --> M\n```",
+      "x": 1720,
+      "y": 1740,
+      "width": 1080,
+      "height": 1740
+    },
+    {
+      "id": "0f42e8d924f221fe",
+      "x": 260,
+      "y": 2795,
+      "width": 1200,
+      "height": 640,
+      "type": "link",
+      "url": "https://uploads.knightlab.com/storymapjs/f75056c4573a08981bd5202561883b25/resonant-landscapes/index.html"
+    },
+    {
+      "id": "184e1e5c8dcc94ca",
+      "type": "text",
+      "text": "# Core Sound Octomic \n\n- 2nd-order ambisonics microphone \n- The microphone records in \"3 dimensions\" with multiple polar patterns simultaneously. It uses 8 channels to encode A-format ambisonics, which can be decoded in the processing stage. \n- The goal is to provide an ecologically valid reproduction of the perceptual dimensions of a soundscape. \n- It also allows for head-tracking, or the ability for a user to reorient their listening position in the soundscape.\n\n\n\n",
+      "x": 340,
+      "y": 1955,
+      "width": 500,
+      "height": 375
+    },
+    {
+      "id": "9294b4d482ee0691",
+      "type": "text",
+      "text": "# Recording Process",
+      "shape": "oval",
+      "x": 710,
+      "y": 1810,
+      "width": 300,
+      "height": 100
+    },
+    {
+      "id": "d15b06672c9fd330",
+      "type": "file",
+      "file": "20180318_114453_001.jpg",
+      "isSticker": true,
+      "x": 971,
+      "y": 1955,
+      "width": 312,
+      "height": 416
+    },
+    {
       "id": "ea64f0f9aae6bf2a",
       "type": "text",
-      "text": "# Try the app",
+      "text": "# Try the App",
       "shape": "oval",
       "x": 3180,
-      "y": 1723,
+      "y": 2298,
       "width": 339,
       "height": 115
-    },
-    {
-      "id": "8777814200ac5a6a",
-      "type": "file",
-      "file": "Landscape Poster.png",
-      "isSticker": true,
-      "x": 3740,
-      "y": 1860,
-      "width": 500,
-      "height": 667
-    },
-    {
-      "id": "d1a700b94503d39b",
-      "type": "file",
-      "file": "frame.png",
-      "isSticker": true,
-      "x": 3220,
-      "y": 1920,
-      "width": 402,
-      "height": 500
     },
     {
       "id": "fd0fac87c4db51cc",
@@ -331,9 +311,39 @@
       "text": "# Soundscape Concert",
       "shape": "oval",
       "x": 3817,
-      "y": 1780,
+      "y": 2355,
       "width": 347,
       "height": 50
+    },
+    {
+      "id": "d1a700b94503d39b",
+      "type": "file",
+      "file": "frame.png",
+      "isSticker": true,
+      "x": 3220,
+      "y": 2495,
+      "width": 402,
+      "height": 500
+    },
+    {
+      "id": "8777814200ac5a6a",
+      "type": "file",
+      "file": "Landscape Poster.png",
+      "isSticker": true,
+      "x": 3740,
+      "y": 2435,
+      "width": 500,
+      "height": 667
+    },
+    {
+      "id": "a2b4d649078e3d51",
+      "type": "text",
+      "text": "# Use headphones\n",
+      "shape": "diamond",
+      "x": 3291,
+      "y": 3045,
+      "width": 260,
+      "height": 213
     }
   ],
   "edges": [
@@ -344,20 +354,6 @@
       "toNode": "228f7baf25ac7553",
       "toSide": "top",
       "color": "#ffffff"
-    },
-    {
-      "id": "cebba0103ea78b82",
-      "fromNode": "228f7baf25ac7553",
-      "fromSide": "bottom",
-      "toNode": "b58ab484318a334f",
-      "toSide": "top"
-    },
-    {
-      "id": "dc24b2b8fec10e24",
-      "fromNode": "b58ab484318a334f",
-      "fromSide": "right",
-      "toNode": "5dd210221d973325",
-      "toSide": "left"
     },
     {
       "id": "4759bf4abaabe8e5",
@@ -417,6 +413,27 @@
       "fromSide": "right",
       "toNode": "41f824929a04838c",
       "toSide": "right"
+    },
+    {
+      "id": "6102dd996ed05cd8",
+      "fromNode": "228f7baf25ac7553",
+      "fromSide": "bottom",
+      "toNode": "014abd4a2893239e",
+      "toSide": "top"
+    },
+    {
+      "id": "1e4b2577bbd7c91d",
+      "fromNode": "014abd4a2893239e",
+      "fromSide": "right",
+      "toNode": "5dd210221d973325",
+      "toSide": "left"
+    },
+    {
+      "id": "e01a4f4ca4a8e0fd",
+      "fromNode": "a2b4d649078e3d51",
+      "fromSide": "top",
+      "toNode": "d1a700b94503d39b",
+      "toSide": "bottom"
     }
   ]
 }
